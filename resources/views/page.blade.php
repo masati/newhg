@@ -19,8 +19,22 @@
                 <h2>{{$article->title}}</h2>
                 <p>{!!$article->desc!!}</p>
                 <p><a class="btn btn-default" href="{{route('articleShow',['id'=>$article->id])}}" role="button">Подробнее &raquo;</a></p>
-            </div>
 
+
+            <form action="{{ route('articleDelete',['article' => $article->id]) }}" method="post">
+
+                <!-- <input type="hidden" name="_method" value="DELETE">-->
+
+                {{method_field('DELETE')}}
+
+                {{ csrf_field() }}
+
+                <button type="submit" class="btn btn-danger">
+                    Delete
+                </button>
+
+            </form>
+            </div>
         @endforeach
     </div>
 
