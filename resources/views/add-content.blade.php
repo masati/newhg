@@ -32,7 +32,7 @@
                         <textarea class="form-control" name="text"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default">Записать</button>
 
                     {{ csrf_field() }}
 

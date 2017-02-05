@@ -49,22 +49,18 @@ class IndexController
     }
     public function store(Request $request) {
 
-        $this->validate($request, [
+       // dump($request->all());
+      //$this->validate($request, ['title' => 'required|max:255', 'alias' => 'required|unique:articles,alias','text' => 'required']);
 
-            'title' => 'required|max:255',
-            'alias' => 'required|unique:articles,alias',
-            'text' => 'required'
+       $data = $request->all();
+        dump($data);
 
-        ]);
+        $article = new Article;
+        $article->fill($data);
+        dump($article);
+       $article->save();
 
-       // $data = $request->all();
-
-     //   $article = new Article;
-     //   $article->fill($data);
-
-     //   $article->save();
-
-        return redirect('/');
+       return redirect('/');
 
 
     }
