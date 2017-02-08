@@ -29,3 +29,7 @@ Route::delete ('page/delete/{article}', function (\App\Article $article){
    $article->delete();
     return redirect('/');
 })->name ('articleDelete');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
