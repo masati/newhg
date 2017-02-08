@@ -9,8 +9,9 @@
 namespace App\Http\Controllers;
 use App\Article;
 use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Validation;
 
-class IndexController
+class IndexController extends Controller
 {
 //ненужно но пусть будет как образец
     protected $message;
