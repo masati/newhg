@@ -10,7 +10,6 @@
     </div>
 
     <div class="container">
-        <!-- Example row of columns -->
         <div class="row">
 
             <div class="form">
@@ -33,7 +32,7 @@
                         <textarea class="form-control" name="text"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default">Записать</button>
 
                     {{ csrf_field() }}
 
@@ -50,9 +49,4 @@
             <p>&copy; 2017 Company, Inc.</p>
         </footer>
     </div> <!-- /container -->
-
-
-
-
-
 @endsection
