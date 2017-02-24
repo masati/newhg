@@ -8,18 +8,30 @@
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jumbotron.css') }}" rel="stylesheet">
 
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </head>
 
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Проект</a>
+            <a class="navbar-brand" href="/">Проект</a>
         </div>
         <ul id="navbar" class="menu">
             <li><a href="http://www.heroeswm.ru/">Старая игра</a></li>
-            <li><a href="http://dev.heroesaom.com/">Новая игра</a></li>
+            <li><a href="#">Новая игра</a></li>
+            <li><a href="/page/add">Добавить материал</a></li>
+            <li class="dropdown">
+                <a href="/service" class="dropdown-toggle" data-toggle="dropdown">Сервисы <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+
+                    <li><a href="/service/clan/events">Статистика эвента</a></li>
+
+                 </ul>
+            </li>
+
             @if (Auth::guest())
                 <li><a href="{{ route('login') }}">Авторизация</a></li>
                 <li><a href="{{ route('register') }}">Регистрация</a></li>
