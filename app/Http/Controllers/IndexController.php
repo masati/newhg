@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 use App\Article;
+use App\Servicelist;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Validation;
 
@@ -62,7 +63,20 @@ class IndexController extends Controller
        $article->save();
 
        return redirect('/');
-
+    }
+    public function eventclan (){
+        $ivent = 'tj217';
+        dump($ivent);
+        return view('event-clan');
 
     }
-}
+// список сервисов
+    public function service ()
+    {
+        $servicelists = Servicelist::select(['id', 'Name', 'Description'])->get();
+       //
+        //dump($servicelists);
+       //
+        return view('servicesview')->with('servicelists', $servicelists);
+    }
+ }

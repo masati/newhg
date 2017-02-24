@@ -29,6 +29,10 @@ Route::delete ('page/delete/{article}', function (\App\Article $article){
    $article->delete();
     return redirect('/');
 })->name ('articleDelete');
+// список сервисов
+Route::get('service','IndexController@service');
+
+Route::get('service/clan/events','IndexController@eventclan');
 
 Auth::routes();
 
