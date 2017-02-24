@@ -65,6 +65,8 @@ class IndexController extends Controller
        return redirect('/');
     }
     public function eventclan (){
+        $ivent = 'tj217';
+        dump($ivent);
         return view('event-clan');
 
     }
@@ -72,7 +74,9 @@ class IndexController extends Controller
     public function service ()
     {
         $servicelists = Servicelist::select(['id', 'Name', 'Description'])->get();
+       //
         //dump($servicelists);
+       //
         return view('servicesview')->with('servicelists', $servicelists);
     }
  }
