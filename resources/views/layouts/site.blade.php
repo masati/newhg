@@ -14,6 +14,11 @@
 
 <body>
 
+<script>$(function() {
+        $('.dropdown a.dropdown-toggle').click(function() {
+            location.href = $(this).attr('href');
+        });
+    });</script>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
