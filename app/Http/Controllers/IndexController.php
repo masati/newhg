@@ -7,8 +7,8 @@
  */
 
 namespace App\Http\Controllers;
-use App\Article;
-use App\Servicelist;
+use App\Models\Article;
+use App\Models\Service;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Validation;
 
@@ -71,12 +71,12 @@ class IndexController extends Controller
 
     }
 // список сервисов
-    public function service ()
+    public function servicelist ()
     {
-        $servicelists = Servicelist::select(['id', 'Name', 'Description'])->get();
+        $services = Service::select(['id', 'servicename', 'description'])->get();
        //
-        //dump($servicelists);
+       // dump('$services');
        //
-        return view('servicesview')->with('servicelists', $servicelists);
+       return view('servicesview')->with('services', $services);
     }
  }

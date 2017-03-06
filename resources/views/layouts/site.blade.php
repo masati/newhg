@@ -29,7 +29,7 @@
             <li><a href="#">Новая игра</a></li>
             <li><a href="/page/add">Добавить материал</a></li>
             <li class="dropdown">
-                <a href="/service" class="dropdown-toggle" data-toggle="dropdown">Сервисы <span class="caret"></span></a>
+                <a href="/services" class="dropdown-toggle" data-toggle="dropdown">Сервисы <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
 
                     <li><a href="/service/clan/events">Статистика эвента</a></li>

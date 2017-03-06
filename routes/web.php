@@ -30,7 +30,7 @@ Route::delete ('page/delete/{article}', function (\App\Article $article){
     return redirect('/');
 })->name ('articleDelete');
 // список сервисов
-Route::get('service','IndexController@service');
+Route::get('services','IndexController@servicelist');
 
 Route::get('service/clan/events','IndexController@eventclan');
 

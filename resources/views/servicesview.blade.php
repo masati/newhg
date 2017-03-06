@@ -13,11 +13,11 @@
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-            @foreach($servicelists as $servicelist)
+            @foreach($services as $service)
 
                 <div class="col-md-4">
-                    <h2>{{$servicelist->Name}}</h2>
-                    <p>{!!$servicelist->Description!!}</p>
+                    <h2>{{$service->servicename}}</h2>
+                    <p>{!!$service->description!!}</p>
 
                 </div>
             @endforeach
