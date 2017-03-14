@@ -23,7 +23,7 @@ Route::get('article/{id}','IndexController@show')->name('articleShow');
 Route::get('page/add','IndexController@add');
 Route::post('page/add', 'IndexController@store')->name('articleStore');
 //удаление материала
-Route::delete ('page/delete/{article}', function (\App\Article $article){
+Route::delete ('page/delete/{article}', function (\App\Models\Article $article){
 
    // работает везде $article_tmp = \App\Article::where('id',$article)->first();
    $article->delete();

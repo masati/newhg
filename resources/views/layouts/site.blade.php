@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">+
 <head>
     <meta charset="utf-8">
 
     <title>Базовая страница</title>
 
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jumbotron.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -14,11 +14,7 @@
 
 <body>
 
-<script>$(function() {
-        $('.dropdown a.dropdown-toggle').click(function() {
-            location.href = $(this).attr('href');
-        });
-    });</script>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -29,11 +25,11 @@
             <li><a href="#">Новая игра</a></li>
             <li><a href="/page/add">Добавить материал</a></li>
             <li class="dropdown">
-                <a href="/services" class="dropdown-toggle" data-toggle="dropdown">Сервисы <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Сервисы <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-
+                    <li class="dropdown-header"><a href="/services">Список сервисов</li>
                     <li><a href="/service/clan/events">Статистика эвента</a></li>
-
+                    <li><a href="/service/clan/events">Чтонибудь-ещё</a></li>
                  </ul>
             </li>
 
