@@ -12,14 +12,18 @@
 
 <div class="container">
     <!-- Example row of columns -->
+    @if (isset($message))
+        {{ $message }}
+    @endif
     <div class="row">
         @foreach($articles as $article)
 
             <div class="col-md-4">
                 <h2>{{$article->title}}</h2>
                 <p>{!!$article->desc!!}</p>
+                @can('delete-post', $article)
                 <p><a class="btn btn-default" href="{{route('articleShow',['id'=>$article->id])}}" role="button">Подробнее &raquo;</a></p>
-
+                @endcan
 
             <form action="{{ route('articleDelete',['article' => $article->id]) }}" method="post">
 
@@ -28,10 +32,11 @@
                 {{method_field('DELETE')}}
 
                 {{ csrf_field() }}
-
+                @can('delete-post', $article)
                 <button type="submit" class="btn btn-danger">
                     Delete
                 </button>
+                @endcan
 
             </form>
             </div>

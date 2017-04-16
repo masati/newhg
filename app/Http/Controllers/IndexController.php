@@ -7,6 +7,8 @@
  */
 
 namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\Auth;
 use App\Models\Article;
 use App\Models\Service;
 use Symfony\Component\HttpFoundation\Request;
@@ -34,7 +36,9 @@ class IndexController extends Controller
     public function show($id) {
 
         $article = Article::select(['id','title','text'])->where('id',$id)->first();
-
+        if (Auth::user()->cannot('delete-post', $article)) {
+            return redirect ('/')->with('message', 'oops!');
+        }
         //dump($article);
 
         return view('article_content')->with(['message'=>$this->message,
