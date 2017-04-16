@@ -12,7 +12,7 @@
 */
 
 //Route::get('/', function () {
-  //  return view('welcome');
+//  return view('welcome');
 //});
 //направление на стартовую странчику
 Route::get('/', 'IndexController@ind1');
@@ -37,3 +37,7 @@ Route::get('service/clan/events','IndexController@eventclan');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/myOwl', function (){
+    return view('vik.owl');
+
+});
