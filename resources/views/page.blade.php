@@ -1,5 +1,5 @@
 @extends('layouts.site')
-@extends('layouts.footer')
+
 @section('content')
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
@@ -38,10 +38,5 @@
         @endforeach
     </div>
 
-    <hr>
-    @section('footer')
-
-    @endsection
   </div> <!-- /container -->
-
 @endsection
