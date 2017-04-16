@@ -37,16 +37,7 @@
                     {{ csrf_field() }}
 
                 </form>
-
-
-
             </div>
         </div>
-
-        <hr>
-
-        <footer>
-            <p>&copy; 2017 Company, Inc.</p>
-        </footer>
     </div> <!-- /container -->
 @endsection
