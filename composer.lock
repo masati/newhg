@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d57c49323556748b14c04701ed768e16",
+    "content-hash": "1363257c31627c420ace4969338ad72d",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -742,6 +742,57 @@
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
+            "name": "kint-php/kint",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kint-php/kint.git",
+                "reference": "a8549198558560b24e2879c6bac2875de5371483"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kint-php/kint/zipball/a8549198558560b24e2879c6bac2875de5371483",
+                "reference": "a8549198558560b24e2879c6bac2875de5371483",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Kint.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rokas Šleinius",
+                    "homepage": "https://github.com/kint-php"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/kint-php/kint/contributors"
+                }
+            ],
+            "description": "Kint - debugging helper for PHP developers",
+            "homepage": "https://github.com/kint-php/kint",
+            "keywords": [
+                "debug",
+                "kint",
+                "php"
+            ],
+            "time": "2017-01-15T14:23:43+00:00"
+        },
+        {
             "name": "kodicms/laravel-assets",
             "version": "v0.3.5",
             "source": {
@@ -1121,12 +1172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelRUS/SleepingOwlAdmin.git",
-                "reference": "62a3c3ecc73c8ccc404d3ec6ce757c22e448620e"
+                "reference": "1bc9df1174fc36f7220ccfca67ab499e56b4f576"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/62a3c3ecc73c8ccc404d3ec6ce757c22e448620e",
-                "reference": "62a3c3ecc73c8ccc404d3ec6ce757c22e448620e",
+                "url": "https://api.github.com/repos/LaravelRUS/SleepingOwlAdmin/zipball/1bc9df1174fc36f7220ccfca67ab499e56b4f576",
+                "reference": "1bc9df1174fc36f7220ccfca67ab499e56b4f576",
                 "shasum": ""
             },
             "require": {
@@ -1179,7 +1230,7 @@
                 "crud",
                 "laravel"
             ],
-            "time": "2017-03-03 18:33:30"
+            "time": "2017-04-08 15:52:01"
         },
         {
             "name": "league/flysystem",
@@ -1955,7 +2006,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jean-FranГ§ois Simon",
+                    "name": "Jean-François Simon",
                     "email": "jeanfrancois.simon@sensiolabs.com"
                 },
                 {
@@ -2772,7 +2823,7 @@
             ],
             "authors": [
                 {
-                    "name": "FranГ§ois Zaninotto"
+                    "name": "François Zaninotto"
                 }
             ],
             "description": "Faker is a PHP library that generates fake data for you.",
@@ -2833,12 +2884,12 @@
             "version": "0.9.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/padraic/mockery.git",
+                "url": "https://github.com/mockery/mockery.git",
                 "reference": "6fdb61243844dc924071d3404bb23994ea0b6856"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/6fdb61243844dc924071d3404bb23994ea0b6856",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/6fdb61243844dc924071d3404bb23994ea0b6856",
                 "reference": "6fdb61243844dc924071d3404bb23994ea0b6856",
                 "shasum": ""
             },
@@ -2867,7 +2918,7 @@
             ],
             "authors": [
                 {
-                    "name": "PГЎdraic Brady",
+                    "name": "Pádraic Brady",
                     "email": "padraic.brady@gmail.com",
                     "homepage": "http://blog.astrumfutura.com"
                 },
