@@ -33,7 +33,9 @@
                     </div>
 
                     <button type="submit" class="btn btn-default">Записать</button>
-
+                    <script>
+                        'user_id'=Auth::user()->id
+                    </script>
                     {{ csrf_field() }}
 
                 </form>

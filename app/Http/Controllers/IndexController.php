@@ -28,7 +28,7 @@ class IndexController extends Controller
     public function ind1()
     {
         $message = 'Proverka';
-        $articles = Article::select(['id', 'title', 'desc'])->get();
+        $articles = Article::select(['id', 'title', 'desc','user_id'])->get();
         //dump($articles);
         return view('page')->with('articles', $articles);
     }
@@ -62,11 +62,14 @@ class IndexController extends Controller
         dump($data);
 
         $article = new Article;
+        $article->user_id=Auth::user()->id;
         $article->fill($data);
         dump($article);
+        dump(Auth::user()->id);
+        //@if ($user) <p>{{$user->id}} </p> @endif
        $article->save();
 
-       return redirect('/');
+      return redirect('/');
     }
     public function eventclan (){
         $ivent = 'tj217';
