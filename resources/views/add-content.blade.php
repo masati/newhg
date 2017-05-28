@@ -33,20 +33,13 @@
                     </div>
 
                     <button type="submit" class="btn btn-default">Записать</button>
-
+                    <script>
+                        'user_id'=Auth::user()->id
+                    </script>
                     {{ csrf_field() }}
 
                 </form>
-
-
-
             </div>
         </div>
-
-        <hr>
-
-        <footer>
-            <p>&copy; 2017 Company, Inc.</p>
-        </footer>
     </div> <!-- /container -->
 @endsection

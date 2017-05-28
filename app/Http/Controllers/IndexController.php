@@ -7,8 +7,10 @@
  */
 
 namespace App\Http\Controllers;
-use App\Article;
-use App\Servicelist;
+
+use Illuminate\Support\Facades\Auth;
+use App\Models\Article;
+use App\Models\Service;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Validation;
 
@@ -26,7 +28,7 @@ class IndexController extends Controller
     public function ind1()
     {
         $message = 'Proverka';
-        $articles = Article::select(['id', 'title', 'desc'])->get();
+        $articles = Article::select(['id', 'title', 'desc','user_id'])->get();
         //dump($articles);
         return view('page')->with('articles', $articles);
     }
@@ -34,7 +36,9 @@ class IndexController extends Controller
     public function show($id) {
 
         $article = Article::select(['id','title','text'])->where('id',$id)->first();
-
+        if (Auth::user()->cannot('delete-post', $article)) {
+            return redirect ('/')->with('message', 'oops!');
+        }
         //dump($article);
 
         return view('article_content')->with(['message'=>$this->message,
@@ -58,11 +62,14 @@ class IndexController extends Controller
         dump($data);
 
         $article = new Article;
+        $article->user_id=Auth::user()->id;
         $article->fill($data);
         dump($article);
+        dump(Auth::user()->id);
+        //@if ($user) <p>{{$user->id}} </p> @endif
        $article->save();
 
-       return redirect('/');
+      return redirect('/');
     }
     public function eventclan (){
         $ivent = 'tj217';
@@ -71,12 +78,12 @@ class IndexController extends Controller
 
     }
 // список сервисов
-    public function service ()
+    public function servicelist ()
     {
-        $servicelists = Servicelist::select(['id', 'Name', 'Description'])->get();
+        $services = Service::select(['id', 'servicename', 'description'])->get();
        //
-        //dump($servicelists);
+       // dump('$services');
        //
-        return view('servicesview')->with('servicelists', $servicelists);
+       return view('servicesview')->with('services', $services);
     }
  }
