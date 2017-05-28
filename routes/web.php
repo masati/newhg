@@ -10,30 +10,41 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+Route::get('/', function () {
+  return view('welcome');
+});
 
-//Route::get('/', function () {
-  //  return view('welcome');
-//});
+Route::get('user/{id?}', 'UserController@showProfile');
 //направление на стартовую странчику
-Route::get('/', 'IndexController@ind1');
+//Route::get('/', 'IndexController@ind1');
+Route::get('articles', 'ArticleController@index');
+Route::get('article/{id}','ArticleController@show')->name('articleShow');
 
+Route::get('services', 'GuideServiceController@index');
+Route::get('services/{id}','GuideServiceController@show')->name('serviceShow');
+Route::post('services/{id}/delete', function (\App\Models\GuideService $guideService){
+    $guideService->delete();
+    return redirect('/');
+})->name ('serviceDelete');
 //направление на открытие конретного материала
-Route::get('article/{id}','IndexController@show')->name('articleShow');
+//Route::get('article/{id}','IndexController@show')->name('articleShow');
+
 //создание нового материала
 Route::get('page/add','IndexController@add');
 Route::post('page/add', 'IndexController@store')->name('articleStore');
 //удаление материала
-Route::delete ('page/delete/{article}', function (\App\Article $article){
+Route::delete ('page/delete/{article}', function (\App\Models\Article $article){
 
    // работает везде $article_tmp = \App\Article::where('id',$article)->first();
    $article->delete();
     return redirect('/');
 })->name ('articleDelete');
 // список сервисов
-Route::get('service','IndexController@service');
+//Route::get('service','IndexController@service');
 
 Route::get('service/clan/events','IndexController@eventclan');
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index');

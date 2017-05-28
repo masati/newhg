@@ -7,8 +7,8 @@
  */
 
 namespace App\Http\Controllers;
-use App\Article;
-use App\Servicelist;
+use App\Models\Article;
+use App\Models\Servicelist;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Validation;
 
@@ -30,6 +30,7 @@ class IndexController extends Controller
         //dump($articles);
         return view('page')->with('articles', $articles);
     }
+
     //вызов данных по конретной записи полный просмотр
     public function show($id) {
 

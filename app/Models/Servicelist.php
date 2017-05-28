@@ -1,12 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Servicelist extends Model
 {
-    protected $fillable = ['Name','Description'];
-    //
+    protected $fillable = ['name','description'];
     public $timestamps = false;
 }

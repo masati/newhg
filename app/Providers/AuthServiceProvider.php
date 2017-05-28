@@ -25,6 +25,11 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+/*        Gate::define('doIt', function ($user, $permission) {
+            foreach ($user->currentRolePermissions as $item) {
+                if ($item->permission_text == $permission) return true;
+            }
+            return false;
+        });*/
     }
 }
