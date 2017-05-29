@@ -42,6 +42,6 @@
             </div>
         @endforeach
     </div>
-
-  </div> <!-- /container -->
+    <hr>
+</div> <!-- /container -->
 @endsection

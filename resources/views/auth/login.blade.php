@@ -1,4 +1,4 @@
-@extends('layouts.site')
+@extends('welcome')
 
 @section('content')
 <div class="container">
@@ -55,7 +55,7 @@
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Забыли свой пароль?
+                                    Забыли пароль?
                                 </a>
                             </div>
                         </div>
