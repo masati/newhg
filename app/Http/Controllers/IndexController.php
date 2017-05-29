@@ -7,15 +7,9 @@
  */
 
 namespace App\Http\Controllers;
-<<<<<<< HEAD
 
-use Illuminate\Support\Facades\Auth;
-use App\Models\Article;
-use App\Models\Service;
-=======
 use App\Models\Article;
 use App\Models\Servicelist;
->>>>>>> 4aa5d2c84e9dad44fecc1e687300e1355c596de5
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Validation;
 

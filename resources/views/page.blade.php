@@ -42,12 +42,6 @@
             </div>
         @endforeach
     </div>
-
-<<<<<<< HEAD
-  </div> <!-- /container -->
-@endsection
-=======
     <hr>
 </div> <!-- /container -->
 @endsection
->>>>>>> 4aa5d2c84e9dad44fecc1e687300e1355c596de5

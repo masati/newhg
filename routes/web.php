@@ -15,13 +15,8 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-<<<<<<< HEAD
-//Route::get('/', function () {
-//  return view('welcome');
-//});
-=======
 Route::get('user/{id?}', 'UserController@showProfile');
->>>>>>> 4aa5d2c84e9dad44fecc1e687300e1355c596de5
+
 //направление на стартовую странчику
 //Route::get('/', 'IndexController@ind1');
 Route::get('articles', 'ArticleController@index');
@@ -47,11 +42,8 @@ Route::delete ('page/delete/{article}', function (\App\Models\Article $article){
     return redirect('/');
 })->name ('articleDelete');
 // список сервисов
-<<<<<<< HEAD
-Route::get('services','IndexController@servicelist');
-=======
+
 //Route::get('service','IndexController@service');
->>>>>>> 4aa5d2c84e9dad44fecc1e687300e1355c596de5
 
 Route::get('service/clan/events','IndexController@eventclan');
 
