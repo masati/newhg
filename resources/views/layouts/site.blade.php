@@ -14,6 +14,7 @@
 
 <body>
 
+<<<<<<< HEAD
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -97,3 +98,23 @@
 @yield('content')
 </body>
 </html>
+=======
+@include('_partials.header')
+<div id="wrap">
+    @if(count($errors) > 0)
+
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @yield('content')
+</div>
+@include('_partials.footer')
+</body>
+</html>
+>>>>>>> 4aa5d2c84e9dad44fecc1e687300e1355c596de5
